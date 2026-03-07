@@ -1,23 +1,32 @@
 #include <stdio.h>
-#include <string.h>
+#include <Ctype.h>
 
 int main(){
-    char palavra[100], letra;
-    int i, contador = 0;
-
-    printf("Informe uma palavra: ");
-    scanf(" %s", palavra);
-
-    printf("Informe uma letra:");
-    scanf("%c", &letra); // Espaço antes de %c para limpar o buffer
-
-    for(i = 0; palavra[i] != '\0'; i++){
-        if(palavra[i] == letra){
-            contador++;
-        }
-    }
-
-    printf("Qtde: %D\n", contador);
-
-    return 0;
+	char palavra[100], substito;
+	int totVogal = 0;
+	
+	printf("Digite uma palavra: \n");
+	scanf("%s", palavra);
+	
+	for(int i = 0; i < strlen(palavra); i++){
+		char c = tolower(palavra[i]);
+		if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+			totVogal++;
+		}
+	}
+	
+	printf("HÃ¡ um total de %d vogais na palavra \n", totVogal);
+	printf("Digite um caracter: \n");
+	scanf(" %c", &substito);
+	
+	for(int i = 0; i < strlen(palavra); i++){
+		char c = tolower(palavra[i]);
+		if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+			palavra[i] = substito;
+		}
+	}
+	
+	printf("\n %s", palavra);
+	
+	return 0;
 }
