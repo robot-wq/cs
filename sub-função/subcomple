@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include "string.h"
+
+int main (){
+    char str1 [21], str2 [21];
+    int inicio, fim;
+
+    printf("Informe uma string \n");
+    scanf("%[^\n]", str1);
+
+    printf("\nInforme o inicio: ");
+    scanf("%i", &inicio);
+
+    printf("\nInforme o fim: ");
+    scanf("%i", &fim);
+
+    int retorno = substring(str1, str2, inicio, fim);
+
+    printf("\nSub: %s", str2);
+    printf ("\nQtde de caracteres copiados: %i", retorno);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int substring(char strorigem[21],
+               char strdestino[21],
+               int inicio,
+               int fim){
+    int i, j;
+    for(i = inicio, j = 0;i <= fim;i++, j++){
+        strdestino[j] = strorigem[i];
+
+    }
+    strdestino[j] = '\0';
+    return j;
+
+}
