@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1773355663 source:c:\users\0030482523005\desktop\sub-função\main.c
+	<stdio.h>
+	<string.h>
+
+1773355927 source:c:\users\0030482523005\desktop\sub-função\sub.c
+	<stdio.h>
+	"string.h"
+
