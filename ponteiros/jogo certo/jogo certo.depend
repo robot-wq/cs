@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1775867052 source:c:\users\0030482523005\downloads\jogo certo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<windows.h>
+
