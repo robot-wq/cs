@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+void abreviar_frase(int *abreviar, int *frase) {
+    int temp = *abreviar;
+    *abreviar = *frase;
+    *frase = temp;
+
+
+}
+
+int main() {
+    char frase[100]
+    int tamanho = 0;
+    for (int i = 0; i !=' ';i++){
+    while (i != '\0' && I != ' ') {
+            tamanho++
+    }
+    if(tamanho <4){
+        printf("%s", frase);
+    }
+    else(tamanho >4){
+            printf("tamanho", tamanho - 2);
+            char c = palavra[0];
+            char f = palavra[tamanho -1];
+    }
+    printf("Digite dois inteiros: ");
+    scanf("%d", &abreviar);
+    scanf("%d", &frase);
+
+    abreviar_frase(&abreviar, &frase);
+    printf("Apos a troca: %d %d\n", abreviar, frase);
+
+    return 0;
+}
